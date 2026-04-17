@@ -1,0 +1,38 @@
+Date,Product_Category,Revenue,Customer_ID,Location
+2024-01-01,Electronics,1200,CUST-001,New York
+2024-01-05,Furniture,850,CUST-002,London
+2024-01-10,Electronics,1500,CUST-003,Tokyo
+2024-01-15,Apparel,300,CUST-001,New York
+2024-01-20,Electronics,2200,CUST-004,Berlin
+2024-02-01,Electronics,1300,CUST-005,Paris
+2024-02-05,Furniture,950,CUST-002,London
+2024-02-12,Apparel,450,CUST-006,Sydney
+2024-02-20,Electronics,1800,CUST-003,Tokyo
+2024-03-01,Electronics,1400,CUST-004,Berlin
+2024-03-10,Furniture,1100,CUST-001,New York
+2024-03-15,Apparel,500,CUST-007,Dubai
+2024-03-25,Electronics,2500,CUST-008,Mumbai
+2024-04-01,Electronics,1600,CUST-005,Paris
+2024-04-10,Furniture,1200,CUST-002,London
+2024-04-20,Apparel,600,CUST-003,Tokyo
+2024-05-01,Electronics,1900,CUST-009,Singapore
+2024-05-15,Furniture,1300,CUST-004,Berlin
+2024-05-25,Apparel,700,CUST-001,New York
+2024-06-01,Electronics,2100,CUST-002,London
+2024-06-15,Furniture,1400,CUST-010,Toronto
+2024-07-01,Electronics,2300,CUST-003,Tokyo
+2024-07-15,Apparel,800,CUST-004,Berlin
+2024-08-01,Electronics,2500,CUST-001,New York
+2024-08-15,Furniture,1600,CUST-005,Paris
+2024-09-01,Electronics,2700,CUST-002,London
+2024-09-15,Apparel,900,CUST-006,Sydney
+2024-10-01,Electronics,3000,CUST-003,Tokyo
+2024-10-15,Furniture,1800,CUST-004,Berlin
+2024-11-01,Electronics,3200,CUST-001,New York
+2024-11-15,Apparel,1000,CUST-005,Paris
+2024-12-01,Electronics,3500,CUST-002,London
+2024-12-15,Furniture,2000,CUST-003,Tokyo
+2025-01-01,Electronics,3800,CUST-004,Berlin
+2025-01-15,Apparel,1100,CUST-001,New York
+2025-02-01,Electronics,4000,CUST-002,London
+2025-02-15,Furniture,2200,CUST-003,Tokyo

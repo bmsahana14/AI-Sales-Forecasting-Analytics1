@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+:root {
+  font-family: 'Outfit', sans-serif;
+  background-color: #050505;
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { margin: 0; overflow-x: hidden; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #334155; }
+
+/* ── GLASSMORPHISM ── */
+.glass {
+  background: rgba(10, 20, 40, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  transition: border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 210, 255, 0.15);
+}
+
+/* ── GRADIENT TEXT ── */
+.text-gradient {
+  background: linear-gradient(135deg, #2563eb, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── PREMIUM BUTTON ── */
+.btn-neural {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: white;
+  background: linear-gradient(135deg, #2563eb 0%, #00d2ff 100%);
+  box-shadow: 0 4px 20px rgba(0, 210, 255, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-neural:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 210, 255, 0.4);
+}
+
+.btn-neural:active {
+  transform: translateY(0);
+}
+
+/* ── RECHARTS OVERRIDE ── */
+.recharts-tooltip-wrapper { outline: none !important; }
+.recharts-default-legend { padding: 0 !important; }

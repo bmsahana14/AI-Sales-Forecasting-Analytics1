@@ -1,0 +1,9 @@
+pandas
+numpy
+plotly
+streamlit
+pmdarima
+fpdf2
+supabase
+PyYAML
+openpyxl

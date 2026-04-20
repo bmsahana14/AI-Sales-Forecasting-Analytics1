@@ -25,7 +25,9 @@ try:
 except ImportError:
     GENAI_AVAILABLE = False
 
-load_dotenv()
+# ── Load Configuration ────────────────────────────────────────────────────────
+env_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path=env_path)
 
 # ── APP SETUP ─────────────────────────────────────────────────────────────────
 app = FastAPI(title="ForecastIQ API", version="2.0.0")
@@ -186,9 +188,13 @@ async def get_forecast(request: ForecastRequest):
         return {"error": "pmdarima not installed. Run: pip install pmdarima"}
 
     df = pd.DataFrame(request.data)
-    df["date"]  = pd.to_datetime(df["date"])
+    # Robust date parsing
+    df["date"]  = pd.to_datetime(df["date"], errors="coerce")
+    df = df.dropna(subset=["date"]) # Remove rows with invalid dates
     df["price"] = pd.to_numeric(df["price"], errors="coerce").fillna(0)
-    ts = df.sort_values("date").set_index("date").resample("ME")["price"].sum()
+    
+    # Strictly sort and resample to ensure ARIMA compatibility
+    ts = df.sort_values("date").set_index("date")["price"].resample("ME").sum().fillna(0)
 
     if len(ts) >= 3 and ARIMA_AVAILABLE:
         try:
